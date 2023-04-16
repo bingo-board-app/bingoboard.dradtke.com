@@ -1,0 +1,82 @@
+@import "fullpage.js/dist/fullpage.css";
+$blue: #3e7ac0;
+$red: #e95052;
+$gray: #878888;
+$green: #60b53d;
+$yellow: #fdd752;
+.blue {
+  background: linear-gradient(315deg, lighten($blue, 10) 0%, $blue 100%);
+}
+
+.red {
+  background: linear-gradient(315deg, lighten($red, 10) 0%, $red 100%);
+}
+
+.gray {
+  background: linear-gradient(315deg, lighten($gray, 10) 0%, $gray 100%);
+}
+
+.green {
+  background: linear-gradient(315deg, lighten($green, 10) 0%, $green 100%);
+}
+
+.yellow {
+  background: linear-gradient(315deg, lighten($yellow, 10) 0%, $yellow 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#fullpage > .section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.center-wrapper {
+  text-align: center;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+
+  .center-inner {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: sans-serif;
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 40px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 40px;
+    }
+
+    ul {
+      text-align: left;
+      font-size: 1.25em
+    }
+
+    .svgWrapper svg {
+      max-width: 75vw;
+      max-height: 75vh;
+    }
+
+    a.downloadLink {
+      img {
+        height: 4em;
+        margin: 0.5em
+      }
+    }
+  }
+
+
+}

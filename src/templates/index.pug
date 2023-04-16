@@ -1,0 +1,62 @@
+include ./mixins/_appleTV.pug
+include ./mixins/_iPad.pug
+html
+  head
+    title Bingo Board - An Electronic Flashboard
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes")
+    link(rel='apple-touch-icon' sizes='180x180' href='./apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='./favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='./favicon-16x16.png')
+    link(rel='manifest' href='./site.webmanifest')
+    meta(name='msapplication-TileColor' content='#2b5797')
+    meta(name='theme-color' content='#ffffff')
+
+  body
+    #fullpage
+      div.section.blue(data-tooltip="Flashboard", data-anchor="flashboard")
+        .center-wrapper
+          .center-inner
+            .svgWrapper
+              +AppleTV(require("../images/screenshots/tv-out.png"))
+            h2 External Flashboard Display
+      div.section.red(data-tooltip="Called Numbers", data-anchor="called")
+        .center-wrapper
+          .center-inner
+            .svgWrapper
+              +iPad(require("../images/screenshots/11-inch/2.png"))
+            h2 View Previously Called Numbers
+      div.section.gray(data-tooltip="Patterns", data-anchor="patterns")
+        .center-wrapper
+          .center-inner
+            .svgWrapper
+              +iPad(require("../images/screenshots/11-inch/3.png"))
+            h2 Choose From 67 Built-In Patterns or Make Your Own
+      div.section.green(data-tooltip="Colors", data-anchor="colors")
+        .center-wrapper
+          .center-inner
+            .svgWrapper
+              +iPad(require("../images/screenshots/11-inch/4.png"))
+            h2 14 Colors to Choose From
+      div.section.yellow(data-tooltip="Print Cards", data-anchor="print")
+        .center-wrapper
+          .center-inner
+            .svgWrapper
+              +iPad(require("../images/screenshots/11-inch/5.png"))
+            h2 Print Bingo Cards
+      div.section.white(data-tooltip="Download", data-anchor="download")
+        .center-wrapper
+          .center-inner
+            h1 Bingo Board - An Electronic Flashboard
+            ul
+              li Use your own or choose from 50 built-in bingo patterns
+              li Choose from 14 different background colors
+              li Display the current game number and prize amount on the top of the screen
+              li Use an HDMI cable or AirPlay to display a bingo board on a television or projector.
+              li Print bingo cards.
+              li Manually or automatically call numbers
+              li Option to speak called numbers using text-to-speech
+            p
+              a.downloadLink(href="https://apps.apple.com/om/app/bingo-board-flashboard/id1513086143?mt=12")
+                img(src=require("../images/MacAppStore.svg"))
+              a.downloadLink(href="https://apps.apple.com/us/app/bingo-board-digital-flashboard/id1080222963")
+                img(src=require("../images/AppStore.svg"))
