@@ -49,6 +49,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     font-family: sans-serif;
+    object-fit: contain;
 
     h2 {
       margin-bottom: 0;
@@ -65,9 +66,23 @@ body {
       font-size: 1em
     }
 
-    .svgWrapper svg {
+    .svgWrapper {
       max-width: 75vw;
       max-height: 75vh;
+      aspect-ratio: 1 / 1;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      &.tv {
+        aspect-ratio: 4166 / 2588;
+      }
+
+      &.ipad {
+        aspect-ratio: 2578 / 1862;
+      }
     }
 
     a.downloadLink {
